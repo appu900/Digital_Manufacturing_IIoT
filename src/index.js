@@ -20,14 +20,15 @@ async function startServer(){
         await connectDatabase()
         app.post('/postData',async (req,res)=>{
             const data = req.body;
-            console.log(data)
+            console.log(data.document)
             // const response = await TouchSensor.create(data);
-            res.status(201).send(ok);
+            res.status(201).send("ok");
         })
 
         app.listen(8080, () => console.log('Server is running on port 3000'));
     } catch (error) {
         console.log(error);
+        console.log("something went wrong")
         process.exit(1);
     }
 }
