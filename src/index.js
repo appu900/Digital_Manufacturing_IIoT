@@ -21,8 +21,8 @@ async function startServer(){
         app.post('/postData',async (req,res)=>{
             const data = req.body;
             console.log(data)
-            const response = await TouchSensor.create(data);
-            res.status(201).send(response);
+            // const response = await TouchSensor.create(data);
+            res.status(201).send(ok);
         })
 
         app.listen(8080, () => console.log('Server is running on port 3000'));
