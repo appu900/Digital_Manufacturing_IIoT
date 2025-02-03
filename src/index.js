@@ -2,7 +2,7 @@
 
 import express from 'express';
 import connectDatabase from './config.js';
-import IoTData from './model/iot.js';
+import TouchSensor from './model/iot.js';
 
 const app = express();
 
@@ -20,7 +20,8 @@ async function startServer(){
         await connectDatabase()
         app.post('/postData',async (req,res)=>{
             const data = req.body;
-            const response = await IoTData.create(data);
+            console.log(data)
+            const response = await TouchSensor.create(data);
             res.status(201).send(response);
         })
 
