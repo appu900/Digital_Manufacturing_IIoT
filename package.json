@@ -1,0 +1,27 @@
+{
+  "name": "digital_manufacturing_iiot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/appu900/Digital_Manufacturing_IIoT.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/appu900/Digital_Manufacturing_IIoT/issues"
+  },
+  "homepage": "https://github.com/appu900/Digital_Manufacturing_IIoT#readme",
+  "dependencies": {
+    "express": "^4.21.2",
+    "mongoose": "^8.9.6",
+    "mysql2": "^3.12.0",
+    "nodemon": "^3.1.9"
+  }
+}
