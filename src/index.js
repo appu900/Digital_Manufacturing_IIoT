@@ -16,8 +16,9 @@ async function startServer(){
         app.post('/postData',async (req,res)=>{
             const data = req.body;
             const result = new IoTData(data);
-            await result.save();
-            res.status(201).send(result);
+            const response = await result.save();
+            console.log(response);
+            res.status(201).send(response);
         })
 
         app.listen(8080, () => console.log('Server is running on port 3000'));
