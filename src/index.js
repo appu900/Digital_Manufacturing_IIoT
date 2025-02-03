@@ -6,6 +6,11 @@ import IoTData from './model/iot.js';
 
 const app = express();
 
+
+
+// AHJAHjahjAjhaJAH
+
+const user = "appu";
 app.get('/', (req, res) => {
   res.send('Hello World!');
 });
@@ -15,9 +20,7 @@ async function startServer(){
         await connectDatabase()
         app.post('/postData',async (req,res)=>{
             const data = req.body;
-            const result = new IoTData(data);
-            const response = await result.save();
-            console.log(response);
+            const response = await IoTData.create(data);
             res.status(201).send(response);
         })
 
