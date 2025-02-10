@@ -19,9 +19,11 @@
   },
   "homepage": "https://github.com/appu900/Digital_Manufacturing_IIoT#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.21.2",
     "mongoose": "^8.9.6",
     "mysql2": "^3.12.0",
-    "nodemon": "^3.1.9"
+    "nodemon": "^3.1.9",
+    "socket.io": "^4.8.1"
   }
 }
